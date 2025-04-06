@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terminal Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #1e1e1e;
+            color: #d4d4d4;
+        }
+        .highlight {
+            color: #f0c674;
+        }
+    </style>
+</head>
+<body class="p-4">
+    <div class="bg-black p-4 rounded-lg shadow-lg">
+        <p>Welcome to crosh, the ChromeOS developer shell.</p>
+        <p>If you got here by mistake, don't panic! Just close this tab and carry on.</p>
+        <p>Type <span class="highlight">help</span> for a list of commands.</p>
+        <br>
+        <p>If you want to customize the look/behavior, you can use the options page.</p>
+        <p>Load it by using the Ctrl-Shift-P keyboard shortcut.</p>
+        <br>
+        <p class="highlight">crosh&gt; shell</p>
+        <p>Sudo commands will not succeed by default.</p>
+        <p>If you want to use sudo commands, use the VT-2 shell</p>
+        <p>(Ctrl-Alt-F2 (Right arrow/Refresh)) or build the image with the</p>
+        <p>login_enable_crosh_sudo USE flag:</p>
+        <br>
+        <p class="highlight">$ USE=login_enable_crosh_sudo emerge-$BOARD chromeos-login</p>
+        <p>or</p>
+        <p class="highlight">$ USE=login_enable_crosh_sudo cros build-packages --board=$BOARD</p>
+        <br>
+        <p class="highlight">chronos@babyltiger-rw5 / $ sudo su</p>
+        <p>Sudo: the "no new privileges" flag is set, which prevents sudo from running as root.</p>
+        <p>If sudo is running in a container, you may need to adjust the container configuration to disable the flag.</p>
+        <p class="highlight">chronos@babyltiger-rw5 / $</p>
+    </div>
+</body>
+</html>
